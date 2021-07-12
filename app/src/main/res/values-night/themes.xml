@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Zoo" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_08352B</item>
+        <item name="colorPrimaryDark">@color/color_05201a</item>
+        <item name="colorAccent">@color/color_01614b</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_normal_background">@color/black</color>
+    <color name="color_msg_text">@color/white</color>
+    <color name="color_btn_text">@color/color_03dac5</color>
+
+
+</resources>

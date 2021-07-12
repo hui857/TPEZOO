@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">台北市立動物園</string>
+    <string name="msg_all_year">無休館資訊</string>
+    <string name="msg_view_in_web">開啟網頁</string>
+    <string name="msg_error">Oops! 出現錯誤</string>
+    <string name="msg_no_data">沒有資料</string>
+    <string name="msg_try">重試</string>
+</resources>

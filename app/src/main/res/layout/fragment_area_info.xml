@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_normal_background"
+    android:fitsSystemWindows="false">
+
+    <include
+        android:id="@+id/app_bar_image_layout"
+        layout="@layout/tool_bar_image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:constraint_referenced_ids="tv_area_info,tv_area_memo,tv_area_category,tv_area_plant_title,group_error_info,list"
+                app:flow_verticalStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_area_info"
+                style="@style/AreaInfoStyle"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16" />
+
+            <TextView
+                android:id="@+id/tv_area_memo"
+                style="@style/AreaSubInfoStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                tool:text="memo" />
+
+            <TextView
+                android:id="@+id/tv_area_category"
+                style="@style/AreaSubInfoStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                tool:text="category" />
+
+            <Button
+                android:id="@+id/tv_area_web"
+                style="@style/AreaInfoStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_marginEnd="@dimen/dp_16"
+                android:paddingStart="@dimen/dp_4"
+                android:paddingEnd="@dimen/dp_4"
+                android:layout_marginStart="@dimen/dp_16"
+                android:text="@string/msg_view_in_web"
+                android:textColor="@color/color_btn_text"
+                android:background="@drawable/selector_text_link"
+                app:layout_constraintBottom_toBottomOf="@id/tv_area_category"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <include
+                android:id="@+id/group_error_info"
+                layout="@layout/layout_error"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dp_16"
+                app:layout_constraintTop_toBottomOf="@+id/tv_area_plant_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/group_empty_info"
+                layout="@layout/layout_empty"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dp_16"
+                app:layout_constraintTop_toBottomOf="@+id/tv_area_plant_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_area_plant_title"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingStart="@dimen/dp_16"
+                android:paddingEnd="@dimen/dp_16"
+                android:text="植物資訊"
+                style="@style/PlantTitleStyle"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <ProgressBar
+                android:id="@+id/progress_circular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                app:layout_constraintTop_toBottomOf="@+id/tv_area_plant_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
