@@ -79,7 +79,7 @@ class ZooRepository {
     private fun getPlantsFromLocal(context: Context, q: String): Observable<List<PlantInfo>> {
         return Observable.create { emitter ->
             val results = mutableListOf<PlantInfo>()
-            val reader = BufferedReader(InputStreamReader(context.assets.open("bbbb.csv")))
+            val reader = BufferedReader(InputStreamReader(context.assets.open("plant.csv")))
             var line: String?
             var i = 0
             var keyList: List<String> = arrayListOf()
