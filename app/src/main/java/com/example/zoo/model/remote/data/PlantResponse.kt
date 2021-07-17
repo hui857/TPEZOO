@@ -16,7 +16,7 @@ data class PlantResult(
     val results: List<PlantInfo>
 )
 
-@Parcelize
+@kotlinx.parcelize.Parcelize
 data class PlantInfo(
     @SerializedName("_id") val id: Int,
     @SerializedName("F_AlsoKnown") val alsoKnown: String,

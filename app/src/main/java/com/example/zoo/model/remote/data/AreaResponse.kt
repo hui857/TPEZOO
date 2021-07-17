@@ -16,7 +16,7 @@ data class AreaResult(
     val sort: String
 )
 
-@Parcelize
+@kotlinx.parcelize.Parcelize
 data class AreaInfo(
     @SerializedName("_id") val id: Int,
     @SerializedName("E_Category") val category: String,
